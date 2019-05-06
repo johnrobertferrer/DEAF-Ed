@@ -1,0 +1,276 @@
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+/* #fixed-tab-1 {
+    background: white;
+    padding-bottom: 15px;
+}
+
+#fixed-tab-2 {
+    background: white;
+    padding-bottom: 15px;
+}
+
+#fixed-tab-3 {
+    background: white;
+    padding-bottom: 15px;
+} */
+
+.menu-block{
+    width: 94%;
+    height: 160px;
+    margin: 4% 3%;
+    border-radius: 3px;
+    /* padding: 10px; */
+}
+
+.menu-title{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    padding-top: 70px;
+    font-size: 165%;
+}
+
+.menu-left{
+    width: 30%;
+    padding: 45px 15%;
+    float: left;
+}
+
+.menu-right{
+    width: 70%;
+    padding-left: 10px;
+    float: left;
+}
+
+
+.blue-gradient {
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+}
+.purple-gradient {
+    background: linear-gradient(40deg,#ff6ec4,#7873f5);
+}
+.aqua-gradient {
+    background: linear-gradient(40deg,#2096ff,#05ffa3);
+}
+.peach-gradient {
+    background: linear-gradient(40deg,#ffd86f,#fc6262);
+}
+
+#profile-card1 {
+    margin: 2%;
+    margin-bottom: 1%;
+    margin-top: 4%;
+}
+
+#profile-card2 {
+    margin: 2%;
+    margin-bottom: 1%;
+    margin-top: 4%;
+}
+
+.progress-card {
+    /* height: 0px; */
+    border-top-right-radius: .25rem;
+    padding: 10px 10px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.navbar-link {
+    color: white !important;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-custom {
+    padding: 15px 0;
+    margin: 10px 10px;
+    border-radius: 3px;
+}
+
+.mdl-layout-title {
+    font-size: 1.9rem;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.mdl-layout-title-navigation {
+    font-size: 2.3rem;
+    margin-top: 57px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.mdl-layout-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.testimonial-card .card-up {
+    overflow: hidden;
+    height: 120px;
+    -webkit-border-top-left-radius: .25rem;
+    border-top-left-radius: .25rem;
+    -webkit-border-top-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.testimonial-card .avatar {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+
+.carousel-indicators-circle {
+    background: #ff0266 !important;
+    opacity: 0.7 !important;
+    padding: 6.2px !important;
+    
+}
+
+.active{
+    opacity: 1 !important;
+    box-shadow: 0px 0px 10px #ff0266;
+}
+
+.carousel-multi-item .col-sm-4 {
+    float: left;
+    width: 50%;
+    max-width: 100%;
+}
+
+.no-padding-right {
+    padding-left: 0 !important;
+    padding-right: 5px !important;
+}
+
+.no-padding-left {
+    padding-left: 5px !important;
+    padding-right: 0 !important;
+}
+
+#multi-card-carousel {
+    padding: 0 15px;
+}
+
+.controls-top {
+    line-height: 0px;
+}
+
+.multi-card-header-title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.card-title {
+    font-size: 110%;
+}
+
+.card-text {
+    height: 13vh;
+    text-align: justify;
+}
+
+.juicy-peach-gradient {
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+.young-passion-gradient {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+.lady-lips-gradient {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.sunny-morning-gradient {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.rainy-ashville-gradient {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.frozen-dreams-gradient {
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+.warm-flame-gradient {
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+.night-fade-gradient {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.spring-warmth-gradient {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+.winter-neva-gradient {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.dusty-grass-gradient {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.tempting-azure-gradient {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.heavy-rain-gradient {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.amy-crisp-gradient {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+.mean-fruit-gradient {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+.deep-blue-gradient {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.ripe-malinka-gradient {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.cloudy-knoxville-gradient {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.morpheus-den-gradient {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.rare-wind-gradient {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+.near-moon-gradient {
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+
+.card-carousel {
+    width: 96%;
+    margin: 3% 2%;
+}
+
+.list-inline-item {
+    padding: 10px;
+}
+
+.about_deafed {
+    background: #263238;
+    /* padding-bottom: 5px; */
+    color: #fff;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-repeat:no-repeat;
+            background-position: center center;
+            /* background-image:url(img/bg1.jpg); */
+            background: #e91e63;
+            color: #fff; 
+            font-family: 'Roboto'; 
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0 10%;
+            word-spacing: 1px;
+            line-height: 1.5;
+        }
+        .app-emphasize {
+            display: inline-block;
+            color:#ffde03;
+        }
+    </style>
+    <script>
+        if(localStorage.fullname === undefined)
+        {
+            localStorage.fullname = "Avatar Name";
+            localStorage.bio = "You can customize your bio on account settings";
+            localStorage.photo = "avatar.png";
+            localStorage.daily_challenge_1 = 'false';
+            localStorage.daily_challenge_2 = 'false';
+            localStorage.daily_challenge_3 = 'false';
+            localStorage.daily_challenge_4 = 'false';
+            localStorage.daily_challenge_5 = 'false';
+            localStorage.daily_challenge_6 = 'false';
+        }
+    </script>
+</head>
+<body>
+    <!-- <h1>DEAF Ed</h1> -->
+    <center>
+        <img src="svg-loaders/puff.svg" style="width: 35vh; margin-top: 20vh;">
+        <br><br><br><br>
+        <p id="title"></p>
+    </center>
+    <!-- <audio controls autoplay>
+            <source src="speech.mp3" type="audio/mpeg">
+          </audio> -->
+    <script>
+        // setTimeout(function(){
+
+            window.addEventListener('load', function () {
+                var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                var source = audioCtx.createBufferSource();
+                var xhr = new XMLHttpRequest();
+                setTimeout(function(){
+                    document.getElementById("title").innerHTML = "AN <b><div class='app-emphasize'>APP</div></b> THAT BRINGS YOU CLOSER TO PEOPLE";
+                    xhr.open('GET', 'speech.mp3');
+                    xhr.responseType = 'arraybuffer';
+                    xhr.addEventListener('load', function (r) {
+                        audioCtx.decodeAudioData(
+                                xhr.response, 
+                                function (buffer) {
+                                    source.buffer = buffer;
+                                    source.connect(audioCtx.destination);
+                                    source.loop = false;
+                                });
+                        source.start(0);
+                    });
+                    xhr.send();
+                }, 2050);
+                
+            });
+            setTimeout(function(){
+            location = "home.html";
+            }, 6000); 
+    </script>
+</body>
+</html>

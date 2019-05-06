@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; media-src *">    
+    <title>DEAF Ed</title>
+    <script src="js/material.min.js"></script>
+    <link rel="stylesheet" href="css/material.pink-yellow.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    
+    <style>
+        * {
+            /* background: #333 !important; */
+        }
+        @font-face {
+            font-family: Finger;
+            src: url("font/Fingerspelling.ttf");
+        }
+
+        a:active, a:hover {
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header" style="height: 100px;">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title"><center>DEAF Ed</center></span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" id="nav-1" class="mdl-layout__tab is-active">Home</a>
+                <a href="#fixed-tab-2" id="nav-2" class="mdl-layout__tab">Menu</a>
+                <a href="#fixed-tab-3" id="nav-3" class="mdl-layout__tab">Profile</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title-navigation">Navigation</span>
+            <nav class="mdl-navigation">
+                <div class="navbar-custom peach-gradient z-depth-5">
+                    <a class="mdl-navigation__link navbar-link" onclick="location='home.html'" href="home.html">Home</a>
+                </div>
+                <div class="navbar-custom aqua-gradient z-depth-5">
+                    <a class="mdl-navigation__link navbar-link" onclick="location='about.html'" href="about.html">About</a>
+                </div>              
+                <div class="navbar-custom blue-gradient z-depth-5">
+                    <a class="mdl-navigation__link navbar-link" onclick="location='contact.html'" href="contact.html">Contact</a>
+                </div>
+                <div class="navbar-custom purple-gradient z-depth-5">
+                    <a class="mdl-navigation__link navbar-link" onclick="location='account_settings.html'" href="account_settings.html">Account Settings</a>
+                </div>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div class="page-content">
+                    <!-- START -->
+
+                    <div id="multi-card-carousel">
+
+                        <h2 class="multi-card-header-title">Daily Challenge</h2>
+
+                            <!--Carousel Wrapper-->
+                            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+                            
+                                <!--Controls-->
+                                <div class="controls-top">
+                                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                                </div>
+                                <!--/.Controls-->
+                            
+                                <!--Indicators-->
+                                <ol class="carousel-indicators" style="top: 400px;">
+                                    <li data-target="#multi-item-example" data-slide-to="0" class="carousel-indicators-circle active"></li>
+                                    <li data-target="#multi-item-example" data-slide-to="1" class="carousel-indicators-circle"></li>
+                                    <li data-target="#multi-item-example" data-slide-to="2" class="carousel-indicators-circle"></li>
+                                </ol>
+                                <!--/.Indicators-->
+                            
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                            
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+                            
+                                        <div class="col-sm-4 no-padding-right">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg1.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #1</h4>
+                                                    <p class="card-text">Hand your phone to someone and make use of text to sign feature.</p>
+                                                    <a id="button_challenge_1" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="col-sm-4 clearfix d-none d-block no-padding-left">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg2.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #2</h4>
+                                                    <p class="card-text">Try and learn basic words to hand sign from the dictionary.</p>
+                                                    <a id="button_challenge_2" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!--/.First slide-->
+                            
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+                            
+                                        <div class="col-sm-4 no-padding-right">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg3.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #3</h4>
+                                                    <p class="card-text">Know the application and its objectives.</p>
+                                                    <a id="button_challenge_3" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="col-sm-4 clearfix d-none d-block no-padding-left">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg4.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #4</h4>
+                                                    <p class="card-text">Familiarize the people behind this application.</p>
+                                                    <a id="button_challenge_4" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--/.Second slide-->
+                            
+                                    <!--Third slide-->
+                                    <div class="carousel-item">
+                            
+                                        <div class="col-sm-4 no-padding-right">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg5.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #5</h4>
+                                                    <p class="card-text">Try to customize your account information.</p>
+                                                    <a id="button_challenge_5" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="col-sm-4 clearfix d-none d-block no-padding-left">
+                                            <div class="card mb-2">
+                                                <img class="card-img-top" src="img/bg6.jpg" height="130px" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Challenge #6</h4>
+                                                    <p class="card-text">Try to voice out your thought using the voice to sign feature.</p>
+                                                    <a id="button_challenge_6" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                    </div>
+                                    <!--/.Third slide-->
+                            
+                                </div>
+                                <!--/.Slides-->
+                            
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                
+                            <!-- <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                            <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea> -->
+
+                        </div>
+                    <!-- END -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div class="page-content">
+                    <!-- START -->
+                        <div id="menu">
+                            <div class="menu-block color-block peach-gradient z-depth-2" id="voice_to_sign">
+                                <div class="menu-left">
+                                    <img src="img/microphone.svg" alt="" style="width: 70px; height: 70px;">                
+                                </div>
+                                <div class="menu-right">
+                                    <h4 class="menu-title">Voice to Sign</h4>
+                                </div>          
+                            </div>  
+                            <div class="menu-block color-block blue-gradient z-depth-2" id="text_to_sign">
+                                <div class="menu-left">
+                                    <img src="img/text.png" alt="" style="width: 70px; height: 70px;">  
+                                </div>
+                                <div class="menu-right">
+                                    <h4 class="menu-title">Text to Sign</h4>
+                                </div>
+                            </div>  
+                            <div class="menu-block color-block purple-gradient z-depth-2" id="dictionary">
+                                <div class="menu-left">
+                                    <img src="img/dictionary.png" alt="" style="width: 70px; height: 70px;">  
+                                </div>
+                                <div class="menu-right">
+                                    <h4 class="menu-title">Dictionary</h4>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                <div class="page-content">
+                    <!-- START -->
+                    <div id="profile-card1">
+                        <div class="card testimonial-card">
+                            <!--Bacground color-->
+                            <div class="card-up peach-gradient">
+                            </div>   
+                            <!--Avatar-->
+                            <div class="avatar mx-auto white"><img src="img/bg1.jpg" style="width: 110px;" class="rounded-circle img-responsive" alt="avatar" id="profile_pic">
+                            </div>       
+                            <div class="card-body">
+                                <!--Name-->
+                                <h4 class="card-title text-center"><span id="fullname"></span></h4>
+                                <hr>
+                                <!--Quotation-->
+                                <p class="text-center"><span id="bio"></span></p>
+                            </div>       
+                        </div>
+                    </div>
+
+                    <div id="profile-card2" class="progress-card z-depth-3">
+                        <h5 class="text-center">Daily Challenge</h5>
+                        <div class="progress" style="height: 25px; margin-bottom: 15px;">
+                            <div id="daily_challenge" class="progress-bar" role="progressbar" style="background: #F9A825; width: 50%; height: 25px" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                        <h5 class="text-center">Achievement</h5>
+                        <div class="progress" style="height: 30px">
+                            <div id="achievement" class="progress-bar" role="progressbar" style="background: #FF7043; width: 34%; height: 25px" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">34%</div>
+                        </div>
+                    </div> 
+                <!-- END -->
+                </div>
+            </section>
+        </main>
+    </div>  
+
+    <!-- Modal TEXT TO SIGN -->
+    <div class="modal fade" id="modaltexttosign" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        
+        <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modaltexttosign-title" style="font-weight: 500">Text to Sign</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <img src="img/text.png" alt="" style="margin-left: 5%; width: 95%">
+                        </div>
+                        <div class="col-8 col-md-8 col-lg-8">
+                            <div class="md-form">
+                                <input type="text" id="modaltexttosign_text" class="form-control" placeholder="Enter text..">
+                                <!-- <label for="form1" class="" style="box-shadow: none; color: #111;">Enter text..</label> -->
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <h4 id="modal_text_generated" style="font-weight: 500; text-align: center; padding-bottom: 5px; margin-top: 20px; font-size: 160%;">Generated Hand Sign</h4>
+                            <div id="modaltexttosign_sign" style="text-align: center; font-family: Finger; color: #000; font-size: 6rem; width: 100%; word-wrap: break-word; line-height: 60px; letter-spacing: 5px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right: 35%;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal VOICE TO SIGN -->
+    <div class="modal fade" id="modalvoicetosign" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            
+            <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+            <div class="modal-dialog modal-dialog-centered" role="document">
+        
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modaltexttosign-title" style="font-weight: 500">Voice to Sign</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4 col-md-4 col-lg-4">
+                                <img src="img/microphone.svg" alt="" style="margin-left: 5%; width: 95%">
+                            </div>
+                            <div class="col-8 col-md-8 col-lg-8">
+                                <button id="start-record-btn" class="blue-gradient z-depth-4" style="width: 65px; margin-right: 20px; border-radius: 100%; height: 65px; border: none; color: #fff; font-weight: 550;"> START </button>
+                                <button id="pause-record-btn" class="peach-gradient z-depth-2" style="width: 65px; border-radius: 100%; border: none; height: 65px; color: #fff; font-weight: 550;"> STOP </button>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12">
+                                <div class="md-form">
+                                    <input type="text" id="note-textarea" class="form-control" readonly>
+                                    <!-- <label for="form1" class="" style="box-shadow: none; color: #111;">This is the resulted text from voice..</label> -->
+                                </div>
+                            </div>
+                            <!-- <div class="col-4 col-md-4 col-lg-4"> -->
+                                <!-- <button id="check_button" class="purple-gradient" style="height: 35px; width: 100%; border: none; margin-top: 15px; color: #fff; border-radius: 10px;">Check</button> -->
+                            <!-- </div> -->
+                            <div class="col-12 col-md-12 col-lg-12">
+                                
+                                <h4 id="modal_voice_generated" style="font-weight: 500; text-align: center; padding-bottom: 5px; margin-top: 20px; font-size: 160%;">Generated Hand Sign</h4>
+                                <div id="modalvoicetosign_sign" style="text-align: center; font-family: Finger; color: #000; font-size: 6rem; width: 100%; word-wrap: break-word; line-height: 60px; letter-spacing: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right: 35%;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal DICTIONARY -->
+    <div class="modal fade" id="modaldictionary" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        
+        <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+    
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="img/dictionary.png" alt="" style="width: 32px; margin-right: 10px;">
+                    <h4 class="modal-title" id="modaltexttosign-title" style="font-weight: 500">Dictionary</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs md-tabs nav-justified" style="background: #ff3547 !important; border-radius: 0 !important; webkit-border-radius: 0 !important;" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="border-radius: 0 !important;" data-toggle="tab" href="#panel555" role="tab">
+                                    <i class="fa fa-user"></i> English</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="border-radius: 0 !important;" data-toggle="tab" href="#panel666" id="hide_common" role="tab">
+                                    <i class="fa fa-heart"></i> Common Words</a>
+                                </li>
+                            </ul>
+                            <!-- Nav tabs -->
+                            <!-- Tab panels -->
+                            <div class="tab-content">
+                                <!--Panel 1-->
+                                <div class="tab-pane fade in show active" style="box-shadow: none !important;" id="panel555" role="tabpanel">
+                                    <div class="card">                                     
+                                        <!-- Card body -->
+                                        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                            <div class="card-body dictionary-body" style="padding: 5px;">
+                                                <ul id="dictionary_height" style="height: 370px; overflow: auto;">
+                                                    <li class="dictionary" id="airplane">Airplane</li>
+                                                    <li class="dictionary" id="ant">Ant</li>
+                                                    <li class="dictionary" id="balloon">Balloon</li>
+                                                    <li class="dictionary" id="bear">Bear</li>
+                                                    <li class="dictionary" id="car">Car</li>
+                                                    <li class="dictionary" id="cat">Cat</li>
+                                                    <li class="dictionary" id="doughnut">Doughnut</li>
+                                                    <li class="dictionary" id="drum">Drum</li>
+                                                    <li class="dictionary" id="egg">Egg</li>
+                                                    <li class="dictionary" id="elephant">Elephant</li>
+                                                    <li class="dictionary" id="fish">Fish</li>
+                                                    <li class="dictionary" id="fruits">Fruits</li>
+                                                    <li class="dictionary" id="goat">Goat</li>
+                                                    <li class="dictionary" id="gorilla">Gorilla</li>
+                                                    <li class="dictionary" id="hamburger">Hamburger</li>
+                                                    <li class="dictionary" id="hat">Hat</li>
+                                                    <li class="dictionary" id="instruments">Instruments</li>
+                                                    <li class="dictionary" id="iron">Iron</li>
+                                                    <li class="dictionary" id="jellyfish">Jellyfish</li>
+                                                    <li class="dictionary" id="juice">Juice</li>
+                                                    <li class="dictionary" id="kangaroo">Kangaroo</li>
+                                                    <li class="dictionary" id="key">Key</li>
+                                                    <li class="dictionary" id="leaf">Leaf</li>
+                                                    <li class="dictionary" id="lion">Lion</li>
+                                                    <li class="dictionary" id="moon">Moon</li>
+                                                    <li class="dictionary" id="mushroom">Mushroom</li>
+                                                    <li class="dictionary" id="nails">Nails</li>
+                                                    <li class="dictionary" id="nose">Nose</li>
+                                                    <li class="dictionary" id="ostrich">Ostrich</li>
+                                                    <li class="dictionary" id="owl">Owl</li>
+                                                    <li class="dictionary" id="panda">Panda</li>
+                                                    <li class="dictionary" id="peanut">Peanut</li>
+                                                    <li class="dictionary" id="queen">Queen</li>
+                                                    <li class="dictionary" id="quiet">Quiet</li>
+                                                    <li class="dictionary" id="rabbit">Rabbit</li>
+                                                    <li class="dictionary" id="ring">Ring</li>
+                                                    <li class="dictionary" id="scissor">Scissor</li>
+                                                    <li class="dictionary" id="soccer_ball">Soccer ball</li>
+                                                    <li class="dictionary" id="tent">Tent</li>
+                                                    <li class="dictionary" id="tie">Tie</li>
+                                                    <li class="dictionary" id="umbrella">Umbrella</li>
+                                                    <li class="dictionary" id="up">Up</li>
+                                                    <li class="dictionary" id="vacuum">Vacuum</li>
+                                                    <li class="dictionary" id="violin">Violin</li>
+                                                    <li class="dictionary" id="wallet">Wallet</li>
+                                                    <li class="dictionary" id="watch">Watch</li>
+                                                    <li class="dictionary" id="xray">Xray</li>
+                                                    <li class="dictionary" id="xylophone">Xylophone</li>
+                                                    <li class="dictionary" id="yellow">Yellow</li>
+                                                    <li class="dictionary" id="yoyo">Yoyo</li>
+                                                    <li class="dictionary" id="zipper">Zipper</li>
+                                                    <li class="dictionary" id="zoo">Zoo</li>
+                                                </ul>
+    
+                                                <div id="dictionary_gif" style="height: 30vh;"></div>
+                                                <h5 style="text-align: center; margin-top: 40px; padding-bottom: 0px; font-weight: 550;" id="dictionary_gif_title"></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.Panel 1-->
+                                <!--Panel 2-->
+                                <div class="tab-pane fade" id="panel666" style="box-shadow: none !important;" role="tabpanel">
+                                    <div class="card">                                     
+                                        <!-- Card body -->
+                                        <div id="collapseOne2" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div class="card-body common-body" style="padding: 5px;">
+                                                    <ul id="common_height" style="height: 370px; overflow: auto;">
+                                                        <li class="common" id="cold">Cold</li>
+                                                        <li class="common" id="cry">Cry</li>
+                                                        <li class="common" id="drink">Drink</li>
+                                                        <li class="common" id="eat">Eat</li>
+                                                        <li class="common" id="how_are_you">How are you</li>
+                                                        <li class="common" id="i'm_great">I'm great</li>
+                                                        <li class="common" id="jump">Jump</li>
+                                                        <li class="common" id="my_name_is">My name is</li>
+                                                        <li class="common" id="no">No</li>
+                                                        <li class="common" id="pick_up">Pick up</li>
+                                                        <li class="common" id="please">Please</li>
+                                                        <li class="common" id="put">Put</li>
+                                                        <li class="common" id="sleep">Sleep</li>
+                                                        <li class="common" id="thank_you">Thank you</li>
+                                                        <li class="common" id="wake_up">Wake up</li>
+                                                        <li class="common" id="walk">Walk</li>
+                                                        <li class="common" id="yes">Yes</li>
+                                                    </ul>
+        
+                                                    <div id="common_gif" style="height: 30vh;"></div>
+                                                    <h5 style="text-align: center; margin-top: 40px; padding-bottom: 0px; font-weight: 550;" id="common_gif_title"></h5>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.Panel 2-->
+                            </div>
+                            <!-- Tab panels -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right: 35%;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mobile-1.5.0-alpha.1.min.js"></script>    
+    <script src="js/voicetotext.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js//popper.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <style>
+        .ui-loader{
+            display: none !important;
+        }
+    </style>
+    <script>
+        $( document ).ready(function() {
+            var orig_val = $('#note-textarea').val();
+            
+            $('#text_to_sign').click(function(){
+                $('#modal_text_generated').hide();
+                $('#modaltexttosign_sign').hide();
+                $('#modaltexttosign').modal('show');
+                $("#modaltexttosign_text").keyup(function(){
+                    $('#modal_text_generated').show();
+                    $('#modaltexttosign_sign').show();
+                    var texttosign_text = $('#modaltexttosign_text').val();
+                    $.get('img/Dictionary/'+texttosign_text+'.gif')
+                    .done(function() { 
+                        $('#modaltexttosign_sign').html('<img src="img/Dictionary/'+texttosign_text+'.gif" alt="" width="100%" style="height: 41vh;">');
+                    }).fail(function() {
+                        $('#modaltexttosign_sign').html(texttosign_text);
+                    })
+                });
+            });
+            $('#voice_to_sign').click(function(){
+                $('#modal_voice_generated').hide();
+                $('#modalvoicetosign').modal('show');                
+            });
+            // $("#note-textarea").bind("change paste keyup", function(){
+            //     $('#modal_voice_generated').show();
+            //     var voicetosign_text = $('#note-textarea').val();
+            //     $('#modalvoicetosign_sign').html(voicetosign_text);
+            // });
+
+            // var oldValue = $('input#note-textarea').val();
+            // $('input#note-textarea').mouseout(function() {
+            //     check();
+            // });
+            // $('input#note-textarea').keyup(function() {
+            //     check();
+            // });
+            // function check() {
+            //     if (oldValue != $('input#testtext').val())
+            //         alert($('input#testtext').val());
+            //     oldValue = $('input#testtext').val();
+            // }
+
+            $('#pause-record-btn').click(function(){
+                setTimeout(function() {
+                    $('#modal_voice_generated').show();
+                    var voicetosign_text = $('#note-textarea').val();
+                    $.get('img/Dictionary/'+voicetosign_text+'.gif')
+                    .done(function() { 
+                        $('#modalvoicetosign_sign').html('<img src="img/Dictionary/'+voicetosign_text+'.gif" alt="" width="100%" style="height: 33vh;">');
+                    }).fail(function() {
+                        $('#modalvoicetosign_sign').html(voicetosign_text);
+                    })
+                }, 500);
+            });
+
+            // $('#start-record-btn').click(function(){
+            //     $('#note-textarea').val() = $('#note-textarea').val('');
+            // });
+
+            $('#dictionary').click(function(){
+                $('#dictionary_gif').hide();
+                $('#dictionary_gif_title').hide();
+                $('#common_gif').hide();
+                $('#common_gif_title').hide();
+                $('#modaldictionary').modal('show');
+            });
+
+            $('.dictionary').click(function(){
+                $('#common_gif').hide();
+                $('#common_gif_title').hide();
+                $('#dictionary_gif').show();
+                $('#dictionary_gif_title').show();
+                var gif = '<img src="img/Dictionary/'+ this.id +'.gif" alt="" width="100%" style="height: 35vh;" id="dictionary_gif">';
+                $('#dictionary_gif').html(gif);
+                $('#dictionary_gif_title').html(this.id.charAt(0).toUpperCase() + this.id.slice(1));
+                $('#common_gif').hide();
+                $('#common_gif_title').hide();
+            });
+
+            $('.common').click(function(){
+                $('#dictionary_gif').hide();
+                $('#dictionary_gif_title').hide();
+                $('#common_gif').show();
+                $('#common_gif_title').show();
+                var iddd = this.id;
+                if(iddd == 'how_are_you')
+                    iddd = 'how are you';
+                else if(iddd == "i'm_great")
+                    iddd = "i'm great";
+                else if(iddd == "my_name_is")
+                    iddd = "my name is";
+                else if(iddd == "pick_up")
+                    iddd = "pick up";
+                else if(iddd == "thank_you")
+                    iddd = "thank you";
+                else if(iddd == "wake_up")
+                    iddd = "wake up";
+                                
+                var gif1 = '<img src="img/Dictionary/'+ iddd +'.gif" alt="" width="100%" style="height: 35vh;" id="common_gif">';
+                $('#common_gif').html(gif1);
+                $('#common_gif_title').html(iddd.charAt(0).toUpperCase() + iddd.slice(1));
+            });
+
+            // collapseOne1
+            $('.dictionary').click(function(){
+                $('#dictionary_height').css('height','100px');
+            });
+
+            $('.common').click(function(){
+                $('#common_height').css('height','100px');
+            });
+
+            $('#collapseOne1').click(function(){
+                $('#common_gif').hide();
+                $('#common_gif_title').hide();
+            });
+
+            $('#hide_common').click(function(){
+                $('#common_gif').hide();
+                $('#common_gif_title').hide();
+            });
+
+            $('#fixed-tab-1').on( "swipeleft", function(){
+                $('#nav-2').tab('show');
+            });
+            $('#fixed-tab-1').on( "swiperight", function(){
+                $(".mdl-layout__drawer-button").click(); 
+            });
+            $('#fixed-tab-2').on( "swipeleft", function(){
+                $('#nav-3').tab('show');
+            });
+            $('#fixed-tab-2').on( "swiperight", function(){
+                $('#nav-1').tab('show');
+            });
+            $('#fixed-tab-3').on( "swiperight", function(){
+                $('#nav-2').tab('show');
+            });
+        });
+    </script>
+
+    <script>
+        $("#button_challenge_1").click(function(){
+            // TEXT TO SIGN
+            localStorage.daily_challenge_1 = 'true';
+            $('#modal_text_generated').hide();
+            $('#modaltexttosign_sign').hide();
+            $('#modaltexttosign').modal('show');
+            $("#modaltexttosign_text").keyup(function(){
+                $('#modal_text_generated').show();
+                $('#modaltexttosign_sign').show();
+                var texttosign_text = $('#modaltexttosign_text').val();
+                $.get('img/Dictionary/'+texttosign_text+'.gif')
+                .done(function() { 
+                    $('#modaltexttosign_sign').html('<img src="img/Dictionary/'+texttosign_text+'.gif" alt="" width="100%" style="height: 41vh;">');
+                }).fail(function() {
+                    $('#modaltexttosign_sign').html(texttosign_text);
+                })
+            });     
+        });
+
+        $("#button_challenge_2").click(function(){
+            // DICTIONARY
+            localStorage.daily_challenge_2 = 'true';
+            $('#dictionary_gif').hide();
+            $('#dictionary_gif_title').hide();
+            $('#modaldictionary').modal('show');
+            $('.dictionary').click(function(){
+                $('#dictionary_gif').show();
+                $('#dictionary_gif_title').show();
+                var idd = this.id;
+                if(idd == 'soccer_ball')
+                    idd = 'soccer ball';
+                var gif = '<img src="img/Dictionary/'+ idd +'.gif" alt="" width="100%" style="height: 35vh;" id="dictionary_gif">';
+                $('#dictionary_gif').html(gif);
+                $('#dictionary_gif_title').html(idd.charAt(0).toUpperCase() + idd.slice(1));
+            });  
+        });
+
+        $("#button_challenge_3").click(function(){
+            localStorage.daily_challenge_3 = 'true';
+            location = "about.html";
+        });
+
+        $("#button_challenge_4").click(function(){
+            localStorage.daily_challenge_4 = 'true';
+            location = "contact.html";
+        });
+
+        $("#button_challenge_5").click(function(){
+            localStorage.daily_challenge_5 = 'true';
+            location = "account_settings.html";
+        });
+
+        $("#button_challenge_6").click(function(){
+            // VOICE TO SIGN
+            localStorage.daily_challenge_6 = 'true';
+            $('#modal_voice_generated').hide();
+            $('#modalvoicetosign').modal('show');   
+        });
+    </script>
+
+    <script>
+        $('#fullname').html(localStorage.fullname);
+        $('#bio').html(localStorage.bio);
+        $('#profile_pic').attr('src', 'img/avatar.png');
+        var truee = 0;
+        var totall = 6;
+        if(localStorage.daily_challenge_1 == 'true')
+        {
+            truee++;
+            $('#button_challenge_1').attr('class', 'btn btn-danger');
+        }    
+        if(localStorage.daily_challenge_2 == 'true')
+        {
+            truee++;
+            $('#button_challenge_2').attr('class', 'btn btn-danger');
+        }
+        if(localStorage.daily_challenge_3 == 'true')
+        {
+            truee++;
+            $('#button_challenge_3').attr('class', 'btn btn-danger');
+        }
+        if(localStorage.daily_challenge_4 == 'true')
+        {
+            truee++;
+            $('#button_challenge_4').attr('class', 'btn btn-danger');
+        }
+        if(localStorage.daily_challenge_5 == 'true')
+        {
+            truee++;
+            $('#button_challenge_5').attr('class', 'btn btn-danger');
+        }
+        if(localStorage.daily_challenge_6 == 'true')
+        {
+            truee++;
+            $('#button_challenge_6').attr('class', 'btn btn-danger');
+        }
+
+        $('#daily_challenge').html(((truee/totall)*100).toFixed(2) + '%');
+        $('#daily_challenge').css('width', (truee/totall)*100 + '%');
+        $('#achievement').html(truee + '/' + totall);
+        $('#achievement').css('width', (truee/totall)*100 + '%');
+
+        $(".progress").click(function(){
+            swal({
+                type: 'info',
+                title: 'Wow!',
+                text: "You've completed " + truee + " daily challenges."
+            })   
+        });
+    </script>
+</body>
+</html>
